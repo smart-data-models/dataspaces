@@ -2,8 +2,10 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0.1",
   "modelTags": "",
-  "derivedFrom": ["https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
-  "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/Organization.schema.json"],
+  "derivedFrom": [
+    "https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
+    "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/Organization.schema.json"
+  ],
   "license": "",
   "$id": "https://smart-data-models.github.io/dataspaces/LegalPerson/schema.json",
   "title": "LegalPerson",
@@ -329,7 +331,6 @@
           "oneOf": [
             {
               "type": "string",
-              "description": "Property. Physical location of headquarter in ISO 3166-1 alpha2, alpha-3 or numericformat.",
               "enum": [
                 "AD",
                 "AE",
@@ -584,7 +585,6 @@
             },
             {
               "type": "string",
-              "description": "Property. Physical location of headquarter in ISO 3166-1 alpha2, alpha-3 or numericformat.",
               "enum": [
                 "BQAQ",
                 "BUMM",
@@ -619,7 +619,8 @@
                 "ZRCD"
               ]
             }
-          ]
+          ],
+          "description": "Property. Physical location of headquarter in ISO 3166-1 alpha2, alpha-3 or numericformat."
         },
         "legalAddress.state": {
           "type": "string",
@@ -703,54 +704,58 @@
         },
         "isLegalEntity": {
           "type": "boolean",
-          "description": "If value is true, the organization is a legal entity known by a national referential."
+          "description": "Property. If value is true, the organization is a legal entity known by a national referential."
         },
         "isHeadOffice": {
           "type": "boolean",
-          "description": "If value is true, the organization is the head office"
+          "description": "Property. If value is true, the organization is the head office"
         },
         "organizationType": {
           "type": "string",
-          "description": "Type of Organization (company, department...)"
+          "description": "Property. Type of Organization (company, department...)"
         },
         "tradingName": {
           "type": "string",
-          "description": "Name that the organization (unit) trades under"
+          "description": "Property. Name that the organization (unit) trades under"
         },
         "existsDuring": {
           "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Common/TimePeriod.schema.json#TimePeriod"
         },
         "name": {
           "type": "string",
-          "description": "Organization name (department name for example)"
+          "description": "Property. Organization name (department name for example)"
         },
         "nameType": {
           "type": "string",
-          "description": "Type of the name : Co, Inc, Ltd,…"
+          "description": "Property. Type of the name : Co, Inc, Ltd,…"
         },
         "status": {
-          "description": "Status of the organization",
+          "description": "Property. Status of the organization",
           "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/OrganizationStateType.schema.json#OrganizationStateType"
         },
         "otherName": {
           "type": "array",
+          "description": "Property. Keeps track of other names, for example the old name of an organization.",
           "items": {
             "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/OtherNameOrganization.schema.json#OtherNameOrganization"
           }
         },
         "organizationIdentification": {
           "type": "array",
+          "description": "Property. Represents our registration of information used as proof of identity by an organization",
           "items": {
             "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/OrganizationIdentification.schema.json#OrganizationIdentification"
           }
         },
         "organizationChildRelationship": {
           "type": "array",
+          "description": "Property. Child references of an organization in a structure of organizations",
           "items": {
             "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/OrganizationChildRelationship.schema.json#OrganizationChildRelationship"
           }
         },
         "organizationParentRelationship": {
+          "description": "Property. Parent references of an organization in a structure of organizations.",
           "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/OrganizationParentRelationship.schema.json#OrganizationParentRelationship"
         }
       },

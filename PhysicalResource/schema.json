@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "",
+  "derivedFrom":  ["https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
+  "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/Organization.schema.json"],
+  "license": "",
+  "$id": "https://smart-data-models.github.io/dataspaces/PhysicalResource/schema.json",
+  "title": "Physical Resource",
+  "description": "Gaia X defines a physical resources as a Physical Resource that inherits from a Resource. A Physical resource is, and not limited to, a datacenter, a baremetal service, a warehouse, a plant. Those are entities that have a weigth and position in our space. This is equivalent to the entity ",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Property. Unique identifier of the entity"
+        },
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity type. It has to be PhysicalResource",
+          "enum": [
+            "PhysicalResource"
+          ]
+        },
+        "aggregationOf": {
+          "type": "string",
+          "description": "Property. "
+        },
+        "maintainedBy": {
+          "type": "string",
+          "description": "Property. "
+        },
+        "ownedBy": {
+          "type": "string",
+          "description": "Property. Attribute present in data model AgriGreenhouse of subject dataModel.Agrifood with the description Owner (Person or Organization) of the AgriGreenhouse. Attribute present in data model Animal of subject dataModel.Agrifood with the description The owner of the animal. Attribute present in data model AgriParcel of subject dataModel.Agrifood with the description Owner (Person or Organization) of the item. Attribute present in data model AgriFarm of subject dataModel.Agrifood with the description Owner (Person or Organization) of the farm. "
+        },
+        "manufacturedBy": {
+          "type": "string",
+          "description": "Property. "
+        },
+        "locationAddress.country": {
+          "type": "string",
+          "description": "Property. "
+        },
+        "location.gps": {
+          "type": "number",
+          "description": "Property. "
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource"
+        },
+        "description": {
+          "type": "string",
+          "description": "free-text description of the resource"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date till the resource is effective"
+        },
+        "href": {
+          "type": "string",
+          "description": "The URI for the object itself."
+        },
+        "lifecycleState": {
+          "type": "string",
+          "description": "The life cycle state of the resource."
+        },
+        "name": {
+          "type": "string",
+          "description": "A string used to give a name to the resource"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date from which the resource is effective"
+        },
+        "version": {
+          "type": "string",
+          "description": "A field that identifies the specific version of an instance of a resource."
+        },
+        "resourceRelationship": {
+          "type": "array",
+          "items": {
+            "$ref": "../Resource/ResourceRelationship.schema.json#ResourceRelationship"
+          }
+        },
+        "characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "../Resource/ResourceCharacteristic.schema.json#ResourceCharacteristic"
+          }
+        },
+        "place": {
+          "$ref": "../Common/Place.schema.json#Place"
+        },
+        "partyRole": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/PartyRoleRef.schema.json#PartyRoleRef"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+          }
+        },
+        "note": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/Note.schema.json#Note"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    },
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
+
