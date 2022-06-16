@@ -2,8 +2,10 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0.1",
   "modelTags": "",
-  "derivedFrom":  ["https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
-  "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/Organization.schema.json"],
+  "derivedFrom": [
+    "https://gaia-x.eu/wp-content/uploads/2022/05/Gaia-X-Trust-Framework-22.04.pdf",
+    "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/Organization.schema.json"
+  ],
   "license": "",
   "$id": "https://smart-data-models.github.io/dataspaces/PhysicalResource/schema.json",
   "title": "Physical Resource",
@@ -31,104 +33,462 @@
         },
         "aggregationOf": {
           "type": "string",
-          "description": "Property. "
+          "description": "Property. resources related to the resource and that can exist independently of it."
         },
         "maintainedBy": {
           "type": "string",
-          "description": "Property. "
+          "description": "Property. A list of participant maintaining the resource in operational condition and thus have physical access to it."
         },
         "ownedBy": {
           "type": "string",
-          "description": "Property. Attribute present in data model AgriGreenhouse of subject dataModel.Agrifood with the description Owner (Person or Organization) of the AgriGreenhouse. Attribute present in data model Animal of subject dataModel.Agrifood with the description The owner of the animal. Attribute present in data model AgriParcel of subject dataModel.Agrifood with the description Owner (Person or Organization) of the item. Attribute present in data model AgriFarm of subject dataModel.Agrifood with the description Owner (Person or Organization) of the farm. "
+          "description": "Property. a list of participant owning the resource."
         },
         "manufacturedBy": {
           "type": "string",
-          "description": "Property. "
+          "description": "Property. A list of participant manufacturing the resource."
         },
-        "locationAddress.country": {
+        "legalAddress.country": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AI",
+                "AL",
+                "AM",
+                "AO",
+                "AQ",
+                "AR",
+                "AS",
+                "AT",
+                "AU",
+                "AW",
+                "AX",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BL",
+                "BM",
+                "BN",
+                "BO",
+                "BQ",
+                "BR",
+                "BS",
+                "BT",
+                "BV",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CC",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CK",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CU",
+                "CV",
+                "CW",
+                "CX",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "EH",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FK",
+                "FM",
+                "FO",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GF",
+                "GG",
+                "GH",
+                "GI",
+                "GL",
+                "GM",
+                "GN",
+                "GP",
+                "GQ",
+                "GR",
+                "GS",
+                "GT",
+                "GU",
+                "GW",
+                "GY",
+                "HK",
+                "HM",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IM",
+                "IN",
+                "IO",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JE",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "ME",
+                "MF",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MO",
+                "MP",
+                "MQ",
+                "MR",
+                "MS",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NC",
+                "NE",
+                "NF",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NU",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PF",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PM",
+                "PN",
+                "PR",
+                "PS",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RE",
+                "RO",
+                "RS",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SH",
+                "SI",
+                "SJ",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "SS",
+                "ST",
+                "SV",
+                "SX",
+                "SY",
+                "SZ",
+                "TC",
+                "TD",
+                "TF",
+                "TG",
+                "TH",
+                "TJ",
+                "TK",
+                "TL",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TW",
+                "TZ",
+                "UA",
+                "UG",
+                "UM",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VG",
+                "VI",
+                "VN",
+                "VU",
+                "WF",
+                "WS",
+                "YE",
+                "YT",
+                "ZA",
+                "ZM",
+                "ZW"
+              ]
+            },
+            {
+              "type": "string",
+              "enum": [
+                "BQAQ",
+                "BUMM",
+                "BYAA",
+                "CTKI",
+                "CSHH",
+                "DYBJ",
+                "NQAQ",
+                "TPTL",
+                "FXFR",
+                "AIDJ",
+                "FQHH",
+                "DDDE",
+                "GEHH",
+                "JTUM",
+                "MIUM",
+                "ANHH",
+                "NTHH",
+                "NHVU",
+                "PCHH",
+                "PZPA",
+                "CSXX",
+                "SKIN",
+                "RHZW",
+                "PUUM",
+                "HVBF",
+                "SUHH",
+                "VDVN",
+                "WKUM",
+                "YDYE",
+                "YUCS",
+                "ZRCD"
+              ]
+            }
+          ],
+          "description": "Property. Physical location of headquarter in ISO 3166-1 alpha2, alpha-3 or numericformat."
+        },
+        "legalAddress.state": {
           "type": "string",
-          "description": "Property. "
+          "enum": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "AS",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "DC",
+            "FL",
+            "GA",
+            "GU",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "CM",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "PR",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "TT",
+            "UT",
+            "VT",
+            "VA",
+            "VI",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ]
         },
         "location.gps": {
           "type": "number",
-          "description": "Property. "
+          "description": "Property. a list of physical GPS in ISO 6709:2008/Cor 1:2009 format."
         },
         "category": {
           "type": "string",
-          "description": "Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource"
+          "description": "Property. Category of the concrete resource. e.g Gold, Silver for MSISDN concrete resource"
         },
         "description": {
           "type": "string",
-          "description": "free-text description of the resource"
+          "description": "Property. Free-text description of the resource"
         },
         "endDate": {
           "type": "string",
           "format": "date-time",
-          "description": "A date time( DateTime). The date till the resource is effective"
+          "description": "Property. A date time (DateTime). The date till the resource is effective"
         },
         "href": {
           "type": "string",
-          "description": "The URI for the object itself."
+          "description": "Property. The URI for the object itself."
         },
         "lifecycleState": {
           "type": "string",
-          "description": "The life cycle state of the resource."
+          "description": "Property. The life cycle state of the resource."
         },
         "name": {
           "type": "string",
-          "description": "A string used to give a name to the resource"
+          "description": "Property. A string used to give a name to the resource"
         },
         "startDate": {
           "type": "string",
           "format": "date-time",
-          "description": "A date time( DateTime). The date from which the resource is effective"
+          "description": "Property. A date time (DateTime). The date from which the resource is effective"
         },
         "version": {
           "type": "string",
-          "description": "A field that identifies the specific version of an instance of a resource."
+          "description": "Property. A field that identifies the specific version of an instance of a resource."
         },
         "resourceRelationship": {
           "type": "array",
+          "description": "Property. Describes links between resources",
           "items": {
-            "$ref": "../Resource/ResourceRelationship.schema.json#ResourceRelationship"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Resource/ResourceRelationship.schema.json#ResourceRelationship"
           }
         },
         "characteristic": {
           "type": "array",
+          "description": "Property. specific characteristics of the physical resource",
           "items": {
-            "$ref": "../Resource/ResourceCharacteristic.schema.json#ResourceCharacteristic"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Resource/ResourceCharacteristic.schema.json#ResourceCharacteristic"
           }
         },
         "place": {
-          "$ref": "../Common/Place.schema.json#Place"
+          "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Common/Place.schema.json#Place"
         },
         "partyRole": {
           "type": "array",
+          "description": "Property. Party role reference. A party role represents the part played by a party in a given context.",
           "items": {
-            "$ref": "../EngagedParty/PartyRoleRef.schema.json#PartyRoleRef"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/PartyRoleRef.schema.json#PartyRoleRef"
           }
         },
         "relatedParty": {
           "type": "array",
+          "description": "Relationship. Related Entity reference. A related party defines party or party role linked to a specific entity.",
           "items": {
-            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/EngagedParty/RelatedParty.schema.json#RelatedParty"
           }
         },
         "note": {
           "type": "array",
+          "description": "Property. Extra information about a given entity",
           "items": {
-            "$ref": "../Common/Note.schema.json#Note"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Common/Note.schema.json#Note"
           }
         }
       },
       "allOf": [
         {
-          "$ref": "../Common/Entity.schema.json#Entity"
+          "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/candidates/Common/Entity.schema.json#Entity"
         }
       ]
-    },
-      }
     }
+    }
+  }
   ],
   "required": [
     "id",
